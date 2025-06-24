@@ -300,7 +300,7 @@ void DNegate(){ __int64_t val =
 void DAbs(){   if(Tos<0) DNegate();  } pp(DAbs)
 
 void DAdd()
-{ __uint32_t sum= ((__uint64_t)(Cell)Tos<<32) + (__uint64_t)(Cell)Stack[0] +
+{ __uint64_t sum= ((__uint64_t)(Cell)Tos<<32) + (__uint64_t)(Cell)Stack[0] +
 	 ((__uint64_t)(Cell)Stack[1]<<32) + (__uint64_t)(Cell)Stack[2];
 	Stack += 2 ;
 	Tos= sum>>32;
